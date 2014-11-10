@@ -1,10 +1,19 @@
-# jenkins_ci-cookbook
+# chef-jenkins-ci-cookbook
 
-TODO: Enter the cookbook description here.
+chef-jenkins-ci
+===============
+
+Create the Jenkins VM using vagrant and chef 
+
+vagrant plugin install vagrant-berkshelf
+vagrant plugin install vagrant-omnibus
+vagrant up
+ 
+
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Debian , Cent-Os 
 
 ## Attributes
 
