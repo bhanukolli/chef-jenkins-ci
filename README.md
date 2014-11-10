@@ -1,12 +1,39 @@
 # chef-jenkins-ci-cookbook
 
+berks cookbook jenkins_ci
+
+metadata.rb:
+depends 'apt'
+depends 'jenkins'
+depends 'git'
+depends 'maven'
+depends 'wlp'
+
+
+recipes/default.rb
+include_recipe 'apt'
+include_recipe 'git'
+include_recipe 'wlp'
+include_recipe 'maven'
+include_recipe 'jenkins::master'
+
+jenkins_plugin 'scm-api'
+jenkins_plugin 'git-client'
+jenkins_plugin 'git'
+jenkins_plugin 'ssh'
+
+
+berks install
+
 chef-jenkins-ci
 ===============
 
 Create the Jenkins VM using vagrant and chef 
 
 vagrant plugin install vagrant-berkshelf
+
 vagrant plugin install vagrant-omnibus
+
 vagrant up
  
 
