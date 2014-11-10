@@ -12,8 +12,8 @@ depends 'wlp'
 
 recipes/default.rb
 
-include_recipe 'apt'
-include_recipe 'git'
+include_recipe 'apt' 
+include_recipe 'git' 
 include_recipe 'wlp'
 include_recipe 'maven'
 include_recipe 'jenkins::master'
